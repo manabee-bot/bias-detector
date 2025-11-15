@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bias Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">🧠</span>
+                <span class="brand-text">Bias Detector</span>
+            </div>
+            <div class="nav-links">
+                <a href="/" class="nav-link active">Analyze</a>
+                <a href="/about" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Bias Detector</h1>
+            <p class="subtitle">Detects manipulative language in news articles, statements, and social media posts</p>
+        </section>
+
+        <section class="analyzer-section">
+            <div class="input-section">
+                <label for="text-input" class="input-label">
+                    Enter Text to Analyze
+                    <span class="char-counter">
+                        <span id="char-count">0</span> characters
+                    </span>
+                </label>
+                <textarea
+                    id="text-input"
+                    class="text-input"
+                    placeholder="Paste your article, statement, or any text here..."
+                    rows="8"
+                ></textarea>
+
+                <div class="button-group">
+                    <button id="analyze-btn" class="btn btn-primary">
+                        Analyze Text
+                    </button>
+                    <button id="clear-btn" class="btn btn-secondary">
+                        Clear
+                    </button>
+                </div>
+
+                <div class="examples">
+                    <p class="examples-title">Try these examples:</p>
+                    <button class="example-btn" data-example="This new policy is absolutely terrible and will completely destroy our economy. Everyone knows it's a disaster.">Political + Exaggeration</button>
+                    <button class="example-btn" data-example="Women are naturally better at nurturing while men are obviously better leaders. It's just common sense.">Gender + Confirmation</button>
+                    <button class="example-btn" data-example="The president's amazing new proposal will definitely save our country from the horrific crisis we face.">Emotional Bias</button>
+                </div>
+            </div>
+
+            <div id="results-section" class="results-section hidden">
+                <div class="results-header">
+                    <h2>Analysis Results</h2>
+                    <button id="close-results" class="close-btn">✕</button>
+                </div>
+                <div id="results-content" class="results-content"></div>
+            </div>
+
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Analyzing text...</p>
+            </div>
+
+            <div id="error-message" class="error-message hidden"></div>
+        </section>
+
+        <section class="info-section">
+            <h2>What Does This Tool Do?</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">🎯</div>
+                    <h3>Identifies Bias</h3>
+                    <p>Detects 9 types of bias including political, emotional, gender, and exaggeration patterns</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">📊</div>
+                    <h3>Provides Scores</h3>
+                    <p>Calculates bias intensity scores to help you understand the severity</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">💡</div>
+                    <h3>Explains Findings</h3>
+                    <p>Shows specific keywords and explains why they indicate bias</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">🔒</div>
+                    <h3>Privacy First</h3>
+                    <p>All analysis happens on the server - your text is never stored permanently</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Manasvi Kharade</p>
+            <p class="footer-note">Built with Python, Flask, and JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
