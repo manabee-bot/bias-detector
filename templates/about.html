@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Bias Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">🧠</span>
+                <span class="brand-text">Bias Detector</span>
+            </div>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Analyze</a>
+                <a href="/about" class="nav-link active">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="about-section">
+            <h1>About Bias Detector</h1>
+
+            <div class="about-content">
+                <div class="about-card">
+                    <h2>🎓 Vibecoding Assignment</h2>
+                    <p>This project demonstrates rapid AI-assisted web development. The bias detector analyzes text for 9 different types of bias using 400+ keywords and provides actionable insights.</p>
+                </div>
+
+                <div class="about-card">
+                    <h2>🔍 Types of Bias Detected</h2>
+                    <ul class="bias-list">
+                        <li><strong>Political Bias:</strong> Language favoring specific political viewpoints</li>
+                        <li><strong>Emotional Bias:</strong> Words designed to trigger strong reactions</li>
+                        <li><strong>Gender Bias:</strong> Stereotypes based on gender</li>
+                        <li><strong>Exaggeration Bias:</strong> Absolute terms that overstate situations</li>
+                        <li><strong>Negativity Bias:</strong> Disproportionate focus on negative aspects</li>
+                        <li><strong>Confirmation Bias:</strong> Assumes agreement or dismisses alternatives</li>
+                        <li><strong>Religious/Ethnic Bias:</strong> Stereotypes about religious or ethnic groups</li>
+                        <li><strong>Age Bias:</strong> Age-related stereotypes or discriminatory language</li>
+                        <li><strong>Racial Bias:</strong> References to race that may perpetuate stereotypes</li>
+                    </ul>
+                </div>
+
+                <div class="about-card">
+                    <h2>⚙️ How It Works</h2>
+                    <p>The detector uses keyword matching to identify bias patterns:</p>
+                    <ul class="bias-list">
+                        <li>400+ keywords associated with manipulative language</li>
+                        <li>Frequency analysis relative to text length</li>
+                        <li>Intensity scoring for each bias type</li>
+                    </ul>
+                </div>
+
+                <div class="about-card">
+                    <h2>🛠️ Technical Stack</h2>
+                    <p><strong>Backend:</strong> Python with Flask</p>
+                    <p><strong>Frontend:</strong> HTML, CSS, JavaScript</p>
+                    <p><strong>Algorithm:</strong> Pattern matching with 400+ keywords</p>
+                </div>
+
+                <div class="about-card">
+                    <h2>👤 Author</h2>
+                    <p><strong>Manasvi Kharade</strong></p>
+                    <p>High School Senior, Pune, India</p>
+                </div>
+
+                <div class="cta-section">
+                    <a href="/" class="btn btn-primary">Try the Detector</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Manasvi Kharade</p>
+            <p class="footer-note">Built with Python, Flask, and JavaScript</p>
+        </div>
+    </footer>
+</body>
+</html>
